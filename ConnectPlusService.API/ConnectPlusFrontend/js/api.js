@@ -1,0 +1,1 @@
+const BASE_URL = "http://localhost:5163/api";

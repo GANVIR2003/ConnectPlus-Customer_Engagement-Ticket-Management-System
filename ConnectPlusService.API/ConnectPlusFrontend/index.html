@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ConnectPlus Service Portal</title>
+
+    <!-- Bootstrap CSS (IMPORTANT) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- Sidebar -->
+         <div class="mb-3">
+    <label class="text-white">Select Role</label>
+    <select class="form-select" id="roleSelector" onchange="setRole(this.value)">
+        <option value="Agent">Agent</option>
+        <option value="Supervisor">Supervisor</option>
+        <option value="Admin">Admin</option>
+    </select>
+</div>
+<hr>
+        <div class="col-md-2 bg-dark text-white vh-100 p-3">
+            <h4 class="text-center">ConnectPlus</h4>
+            <hr>
+            <button class="btn btn-outline-light w-100 mb-2" onclick="showDashboard()">Dashboard</button>
+            <button class="btn btn-outline-light w-100 mb-2" onclick="showRaiseTicket()">Raise Ticket</button>
+            <button class="btn btn-outline-light w-100 mb-2" onclick="showTickets()">Manage Tickets</button>
+            <button class="btn btn-outline-light w-100" onclick="showCustomers()">Customers</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-10 p-4">
+            <div id="dashboardSection"></div>
+            <div id="raiseTicketSection" class="d-none"></div>
+            <div id="ticketsSection" class="d-none"></div>
+            <div id="customersSection" class="d-none"></div>
+        </div>
+
+    </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/main.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/tickets.js"></script>
+<script src="js/customers.js"></script>
+<script src="js/raiseTicket.js"></script>  
+
+</body>
+</html>
